@@ -1,0 +1,30 @@
+{
+  "name": "gulp-html-validate",
+  "version": "0.0.1",
+  "author": "Alexey <alex.esprit@gmail.com>",
+  "description": "Validate files with `html-validate`",
+  "license": "MIT",
+  "main": "index.js",
+  "files": ["index.js"],
+  "keywords": ["gulpplugin", "html", "html-validate", "lint"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/test-room-7/gulp-html-validate.git"
+  },
+  "devDependencies": {
+    "eslint": "7.6.0",
+    "eslint-config-web-scrobbler": "1.1.0",
+    "prettier": "2.0.5",
+    "prettier-config-web-scrobbler": "0.1.0"
+  },
+  "peerDependencies": {
+    "html-validate": ">=0.11.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": "web-scrobbler"
+  },
+  "prettier": "prettier-config-web-scrobbler"
+}
