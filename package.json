@@ -1,12 +1,19 @@
 {
   "name": "gulp-html-validate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Alexey <alex.esprit@gmail.com>",
   "description": "Validate files with `html-validate`",
   "license": "MIT",
   "main": "index.js",
-  "files": ["index.js"],
-  "keywords": ["gulpplugin", "html", "html-validate", "lint"],
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "html",
+    "html-validate",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/test-room-7/gulp-html-validate.git"
