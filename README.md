@@ -1,6 +1,6 @@
 # gulp-html-validate
 
-Validate files with `html-validate`.
+Validate files with [html-validate](https://html-validate.org/) validator.
 
 ## Installation
 
