@@ -19,7 +19,7 @@ exports.default = () => {
 		gulp
 			.src('index.html')
 			/*
-			 * Aaply the `html-validate` report to each file object, so these
+			 * Apply the `html-validate` report to each file object, so these
 			 * reports can be used by other modules.
 			 */
 			.pipe(htmlvalidate())
