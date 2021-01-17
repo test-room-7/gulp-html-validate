@@ -30,7 +30,8 @@
     "prettier-config-web-scrobbler": "0.1.0"
   },
   "peerDependencies": {
-    "html-validate": ">=4.0.0"
+    "gulp": ">=4",
+    "html-validate": ">=4"
   },
   "scripts": {
     "lint": "eslint ."
