@@ -19,26 +19,22 @@ module.exports = gulpHtmlValidate;
 function gulpHtmlValidate() {
 	const htmlvalidate = htmlValidateCli.getValidator();
 
-	return through.obj((file, encoding, callback) => {
-		if (file.isNull()) {
-			callback(null, file);
+	return through.obj(async (file, encoding, callback) => {
+		try {
+			if (file.isNull() || file.isStream()) {
+				throw new PluginError(pluginName, 'File is null or Streaming not supported');
+			}
+
+			const result = await htmlvalidate.validateString(file.contents.toString(), file.path);
+			file.htmlValidateResult = result;
+		} catch (err) {
+			callback(err);
 			return;
 		}
-
-		if (file.isStream()) {
-			callback(new PluginError(pluginName, 'Streaming not supported'));
-			return;
-		}
-
-		const result = htmlvalidate.validateString(
-			file.contents.toString(),
-			file.path
-		);
-		file.htmlValidateResult = result;
-
 		callback(null, file);
 	});
 }
+
 
 /**
  * Print a report where all errors/warnings are listed.
